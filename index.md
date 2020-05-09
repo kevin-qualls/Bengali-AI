@@ -8,9 +8,9 @@ We are graduate students at Brown University performing machine learning techniq
 For a presentation of our process and results, check out the following screencast (link), [Github Repository](https://github.com/stefs92/Bengali-AI.git) or blogs below!
 
 
-# Initial Blog Post: Assessing the Challenge (Feb. 18, 2020)
+## Initial Blog Post: Assessing the Challenge (Feb. 18, 2020)
 
-# Introduction
+## Introduction
 While being spoken by more than 200 milion people, Bengali language is particulary interesting from the point of view of AI handwritten recognition. Each bengali letter consists of 3 parts -one of 168 possible grapheme roots, one of 11 possible vowel diacritics and one of 7 possible consonant diacritics. The sheer number of combinations makes handwritten symbol recognition a challenging machine learning problem.
 
 
@@ -25,7 +25,7 @@ Although it's a steep task, our team is prepared and has prior experience with i
 <img width="575" alt="Screen Shot 2020-02-18 at 1 47 18 AM" src="https://user-images.githubusercontent.com/54907300/74720496-e941bb00-5203-11ea-9626-bfdd9d10ecb4.png">
  </p>
 
-# Examining the Data
+## Examining the Data
 
 When loading the data, we see there are approximately 10,000 grapheme images to work with. 
 
@@ -43,7 +43,7 @@ We noticed the image has some similarities to the 94th grapheme root from the gl
 
 We believe the more we manually look at the images, the more we can improve our understanding of the Bengali language, which can ultimately help us form our model. 
 
-# Neural Network Model: the Grapheme Root
+## Neural Network Model: the Grapheme Root
 
 As an initial step, we decided to focus on a simpler problem: to design a Neural Network capable of recognizing the grapheme root. 
 We choose to do so in order to quickly have a working model and begin to assess the difficulties of the task. Recognizing the grapheme root provides the most difficult step since it involves 168 different classes compared to the 7 and 11 of the diacritics components. 
@@ -89,7 +89,7 @@ By a few trial and errors we have figured out a good initial set of hyperparamet
 <img width="375" alt="accuracy" src="https://user-images.githubusercontent.com/54907300/74803236-26f91f00-52aa-11ea-85c4-f46c7275a226.png">
 </p>
 
-# Next Steps
+## Next Steps
 
 We noticed the images we loaded have a large yellow cloud around the graphemes. To prevent the model from unnecessarily traning this yellow space, we hope to focus the model on just the blue-lined grapheme. This would involve looking at bounding boxes for our images. Cropping to the union of bounding boxes for all images would be a safe bet but might still result in unnecessarily large image size - therefore, we might want to restrict to a box size large enough to cover (100 - p)% of the images where p is a small parameter that can be tuned to increase accuracy.
 
@@ -107,7 +107,7 @@ The idea is to allow deeper neural networks to more easily approximate shallower
 
 Finally, while ideally we would like to take a shot at designing our own neural network from scratch, we can also try to apply transfer learning - take examples of public source high - performing convolutional neural networks from the internet, and retrain the last couple of layers to adapt them to our task.
 
-# References
+## References
 
 [1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
 
@@ -115,9 +115,9 @@ Finally, while ideally we would like to take a shot at designing our own neural 
 ...
 
 
-# Midway Blog Post: Testing Different Approaches (Mar. 09, 2020)
+## Midway Blog Post: Testing Different Approaches (Mar. 09, 2020)
 
-# Introduction
+## Introduction
 For this blog post, we have implemented some changes in preprocessing the data and tried several incremental changes to our baseline neural network architecture. Instead of jumping right into some of the high-grade CNN architectures available online, we wanted to build up a decently performing model from scratch, and then use one or two fancier tricks to improve the accuracy.
 
 In order to preprocess the data more efficiently, we have started using the ImageDataGenerator class, which allowed us to load the dataset "in real time" while training, hence avoiding overloading the working memory. The dataset is initially available in four .parquet files, each containing around 5000 training images. We loaded the .parquet files, one piece at the time, and used them to generate and save separate image files. The ImageDataGenerator class comes with two tools for loading the data - "FlowFromDirectory" and "FlowFromDataframe" - the first one requiring images of different classes to be stored in separate folders and the second one taking in a pandas dataframe containing the file names and corresponding labels. We opted for the second one, implementing which turned out to be significantly simpler. We took advantage of the methods for rescaling the data and splitting it into the training (80%) and validation (20%).
@@ -152,7 +152,7 @@ For our third approach, we removed SpatialDropouts and kept the regularizers con
 
 After performing the tuning, both the second and the third approach resulted in slightly lower omptimal accuracy (between 2.5% and 3%).
 
-# Making the Neural Network Deeper
+## Making the Neural Network Deeper
 
 After optimizing the number of layers, the next logical step was to try to make the neural network deeper. As we will discuss in this section, this resulted in a large drop in accuracy even after regularizing the layers.
 
@@ -171,13 +171,13 @@ After running our model for 30 epochs, we got small values for accuracy and vali
 Since our training and validation accuracy are about the same, the problem is not due to overfitting. It could possibly be due to vanishing gradients.
 
 
-# Next Steps
+## Next Steps
  
 While we are somewhat satisfied with getting close to 50% accuracy while distinguishing between 168 classes of grapheme roots, it is clear that there is further progress to be made. Our simple neural network architecture seems to have reached its limit, when both increasing the number of convolutional filters and increasing the number of layers lead to a decrease in performance. 
 
 For the remainder of this project, we would like to play with adding more layers with "skip connections", as used in the ResNet architecture and described in the previous blog post. A neural network with an added block of layers and a "skip connection" should be at least as good and hopefully better, and we should see at least a small increase in accuracy.
 
-# References
+## References
 [1] tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
 
 ...
@@ -187,15 +187,15 @@ For the remainder of this project, we would like to play with adding more layers
 
 
 
-# Final Blog Post: Final Model (Mar. 08, 2020)
+## Final Blog Post: Final Model (Mar. 08, 2020)
 
-# Introduction
+## Introduction
 
 Prior to training the final model, we found a bounding box for each image, and then cropped and resized all images to the same size of (50,100) pixels using skimage.transform library. Initially, all pixels have integer values ranging from 0 to 255, with the "empty" pixels taking values close to 255. For the purposes of finding the bounding box, we experimented with different thresholds, and found that removing rows and columns containing only values greater then 200 works pretty well. The cropped images were saved to new .parquet files using pandas.
 
 Since using an instance of ImageDataGenerator class was sometimes causing the session to crash, in our final work we decided to revert back to loading the four cropped image datasets piecewise. We loaded and trained on datasets separately for a number of iterations, with an EarlyStopping callback function. When validation loss on a given part of the dataset would start decreasing, we would switch to another part of the dataset and repeat the process a number of times. We used 5000 images from each of the four sets for validation and the remaining roughly 45000 for training.
 
-# Model
+## Model
 
 We have previously noticed that our model started to perform significantly worse when additional convolutional layers were added. For our final model, we have attempted to get some additional performance by making our neural network 3 layers deeper while introducing a ResNet - style connection short-circuiting the additional layers. Our implementation of the residual block was inspired by [1] and the example from our last homework, in which we learned how to customize Keras models using a bit of Tensorflow backend. Since our convolutions had stride = 1 and 'same' padding, the dimension of their output was the same as the input dimension (except the first convolution, which introduced a number of filters). This fact made combining the two tensors at the end of the residual block particularly simple.
 
@@ -237,7 +237,7 @@ In the first two plots on the left, validation accuracy is higher than the train
 
 Our Kaggle submission is available at https://www.kaggle.com/stefanstanojevic/kernel2b55603361?scriptVersionId=30126084, and resulted in a weighted test accuracy of 75.38%.
 
-# Future Work
+## Future Work
 
 A simple possible imporovement to explore would be preprocessing the images more efficiently. After cropping the images, we have resized all of them to be of the same shape. One thing we noticed while looking at some of the images was that the aspect ratios of cropped graphemes vary widely, as images range from horizontal to vertical. It would be interesting to explore whether different kinds of cropping/resizing could incresase the accuracy a bit.
 
@@ -247,7 +247,7 @@ Finally, the model itself is probably where the largest imporvements can be made
 
 
 
-# References
+## References
 
 [1] Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
 
