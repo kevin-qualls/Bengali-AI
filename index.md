@@ -1,7 +1,7 @@
-## Bengali.AI Handwritten Grapheme Classification
-### Stefan Stanojevic, Kevin Qualls
-### Brown University
-### DATA 2040: Deep Learning and Advanced Topics in Data Science!
+### Bengali.AI Handwritten Grapheme Classification
+#### Stefan Stanojevic, Kevin Qualls
+#### Brown University
+#### DATA 2040: Deep Learning and Advanced Topics in Data Science!
 
 Welcome to our website for our DATA 2040 Midterm Project, where we perform machine learning techniques to classify the Bengali language! 
 
