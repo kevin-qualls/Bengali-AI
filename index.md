@@ -113,8 +113,7 @@ Finally, while ideally we would like to take a shot at designing our own neural 
 [1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
 
 
-.
-.
+...
 
 
 # Midway Blog Post  -  Mar. 09, 2020
@@ -183,8 +182,7 @@ For the remainder of this project, we would like to play with adding more layers
 # References
 1. tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
 
-.
-.
+...
  
 
 
