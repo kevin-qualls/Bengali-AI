@@ -108,12 +108,14 @@ The idea is to allow deeper neural networks to more easily approximate shallower
 
 Finally, while ideally we would like to take a shot at designing our own neural network from scratch, we can also try to apply transfer learning - take examples of public source high - performing convolutional neural networks from the internet, and retrain the last couple of layers to adapt them to our task.
 
-# References
+### References
 
 [1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
 
 
-
+#
+#
+#
 
 
 # Midway Blog Post  -  Mar. 09, 2020
@@ -179,12 +181,14 @@ While we are somewhat satisfied with getting close to 50% accuracy while disting
 
 For the remainder of this project, we would like to play with adding more layers with "skip connections", as used in the ResNet architecture and described in the previous blog post. A neural network with an added block of layers and a "skip connection" should be at least as good and hopefully better, and we should see at least a small increase in accuracy.
 
-# References
+### References
 1. tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
 
                 
 
-
+#
+#
+#
 
 
 
