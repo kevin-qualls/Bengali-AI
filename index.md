@@ -20,7 +20,7 @@ At a high level, we wish to break down an image of a Bengali word and assign the
  <p align="center">
 </p>
 Fig. 1: High-level Description of Project Task
-
+(how to center line in github)
 
 
 
