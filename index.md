@@ -8,7 +8,7 @@ We are graduate students at Brown University performing machine learning techniq
 For a presentation of our process and results, check out the following screencast (link), [Github Repository](https://github.com/stefs92/Bengali-AI.git) or blogs below!
 
 
-# Initial Blog Post: Assessing the Challenge (Feb. 18, 2020)
+# Initial Blog Post: \n Assessing the Challenge (Feb. 18, 2020)
 
 # Introduction
 While being spoken by more than 200 milion people, Bengali language is particulary interesting from the point of view of AI handwritten recognition. Each bengali letter consists of 3 parts -one of 168 possible grapheme roots, one of 11 possible vowel diacritics and one of 7 possible consonant diacritics. The sheer number of combinations makes handwritten symbol recognition a challenging machine learning problem.
@@ -115,7 +115,7 @@ Finally, while ideally we would like to take a shot at designing our own neural 
 ...
 
 
-# Midway Blog Post: Testing Different Approaches (Mar. 09, 2020)
+# Midway Blog Post: \n Testing Different Approaches (Mar. 09, 2020)
 
 # Introduction
 For this blog post, we have implemented some changes in preprocessing the data and tried several incremental changes to our baseline neural network architecture. Instead of jumping right into some of the high-grade CNN architectures available online, we wanted to build up a decently performing model from scratch, and then use one or two fancier tricks to improve the accuracy.
@@ -187,7 +187,7 @@ For the remainder of this project, we would like to play with adding more layers
 
 
 
-# Final Blog Post: Final Model (Mar. 08, 2020)
+# Final Blog Post: \n Final Model (Mar. 08, 2020)
 
 # Introduction
 
