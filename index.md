@@ -9,7 +9,7 @@ For a presentation of our process and results, check out the following screencas
 
 
 # Initial Blog Post  -  Feb. 18, 2020
-### Bengali Grapheme Classification: Assessing the Challenge
+### Assessing the Challenge
 
 
 # Introduction
@@ -118,7 +118,7 @@ Finally, while ideally we would like to take a shot at designing our own neural 
 
 
 # Midway Blog Post  -  Mar. 09, 2020
-### Bengali Grapheme Classification: Testing Different Approaches
+### Testing Different Approaches
 
 # Introduction
 For this blog post, we have implemented some changes in preprocessing the data and tried several incremental changes to our baseline neural network architecture. Instead of jumping right into some of the high-grade CNN architectures available online, we wanted to build up a decently performing model from scratch, and then use one or two fancier tricks to improve the accuracy.
@@ -191,7 +191,7 @@ For the remainder of this project, we would like to play with adding more layers
 
 
 # Final Blog Post  -  Mar. 08, 2020
-### Bengali Grapheme Classification: Final Model
+### Final Model
 
 
 # Introduction
