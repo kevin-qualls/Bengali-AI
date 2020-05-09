@@ -17,9 +17,14 @@ While being spoken by more than 200 milion people, Bengali language is particula
 At a high level, we wish to break down an image of a Bengali word and assign the pieces to three bins:
 <p align="center">
 <img width="647" alt="high_level_picture" src="https://user-images.githubusercontent.com/54907300/74720359-abdd2d80-5203-11ea-90a5-734785bae48b.png">
-<figcaption>{{ "Fig 1: High-Level Description of Task from Kaggle Competition" }}</figcaption>
 </p>
 
+<figure class="image">
+  <img src="{{ include.url }}" alt="{{ include.description }}">
+  <figcaption>{{ include.description }}</figcaption>
+</figure>
+
+{% include image.html url="https://user-images.githubusercontent.com/54907300/74720359-abdd2d80-5203-11ea-90a5-734785bae48b.png" description="Fig. 1: High-Level Description of Task from Kaggle Competition" %}
 
 
  
