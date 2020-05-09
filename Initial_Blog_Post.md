@@ -6,9 +6,6 @@
 
 <!-- Hey guys, I commented out some lines with this command, I guess this is GitHub's way of commenting -->
 
-layout: page
-title: Initial Blog Post
-permalink: /initial-blog-post/
 
 # Bengali Grapheme Classification: Assessing the Challenge
 ### Initial Blog Post  -  Feb. 18, 2020
