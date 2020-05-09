@@ -235,7 +235,7 @@ Training our model on consonant diacritics instead gave us the accuracy of aroun
 
 In the first two plots on the left, validation accuracy is higher than the training accuracy. Then, in the third plot, the training accuracy starts smaller but overtakes the validation accuracy, signaling that some overfitting is starting to take place.
 
-Our Kaggle submission is available [here] (https://www.kaggle.com/stefanstanojevic/kernel2b55603361?scriptVersionId=30126084), and resulted in a weighted test accuracy of 75.38%.
+Our Kaggle submission is available [here](https://www.kaggle.com/stefanstanojevic/kernel2b55603361?scriptVersionId=30126084), and resulted in a weighted test accuracy of 75.38%.
 
 ## Future Work
 
