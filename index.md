@@ -3,11 +3,9 @@
 
 Welcome to our website for our DATA 2040 Midterm Project! 
 
-We are graduate students at Brown University performing machine learning techniques to classify the Bengali language, as part of the following [Kaggle Competition](https://github.com/stefs92/Bengali-AI.git). 
+We are graduate students at Brown University performing machine learning techniques to classify the Bengali language, as part of the following [Kaggle Competition](https://www.kaggle.com/c/bengaliai-cv19). 
 
-https://www.kaggle.com/c/bengaliai-cv19
-
-For a presentation of our process and results, check out the following screencast (link), https://github.com/stefs92/Bengali-AI.git or blogs below!
+For a presentation of our process and results, check out the following screencast (link), [Github Repository](https://github.com/stefs92/Bengali-AI.git) or blogs below!
 
 
 # Initial Blog Post  -  Feb. 18, 2020
