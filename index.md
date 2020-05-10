@@ -253,6 +253,7 @@ Finally, the model itself is probably where the largest imporvements can be made
 
 
 
+
 ## References
 
 [1] Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
