@@ -159,8 +159,13 @@ In order to preprocess the data more efficiently, we have started using the Imag
 Since finishing our last blog post, we have realized that increasing the number of filters in convolutional layers can significantly improve the performance. However, when more than 25 filters were used, this resulted in significant overfitting. This is illustrated below, we can see the validation accuracy plateauing as the training accuracy is steadily improving.
 
 <p align="center">
-<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76132697-35ea0c00-5fe2-11ea-881e-02bda7e403ba.PNG">
+<img width="350" alt="fig 7 graph" src="https://user-images.githubusercontent.com/54907300/81534939-e5bb5d00-9336-11ea-83c1-2f286343616d.png">
+  
 </p>
+<p align="center">
+  <b>Fig. 8: Comparing Validation (Blue) and Training - Overfitting occurs at 50% mark%</b><br>
+</p>
+
 
 Here, the model was trained for 50 epochs. The x-axis is labeled according to epochs/50, the orange plot corresponds to the training and blue plot to the validation accuracy. One counterintuitive aspect of this plot and the following ones is that, in the initial stages of the training, the validation accuracy is actually significantly higher than the training accuracy. We attribute this to using dropouts (here, dropouts are applied only between the final two dense layers), which are applied only during the training and not validation.
 
