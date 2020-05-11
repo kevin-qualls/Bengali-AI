@@ -19,13 +19,10 @@ At a high level, we wish to break down an image of a Bengali word and assign the
 <img width="647" alt="high_level_picture" src="https://user-images.githubusercontent.com/54907300/74720359-abdd2d80-5203-11ea-90a5-734785bae48b.png">
 </p>
 <p align="center">
-  <b>**Fig. 1: High-level Description of Project Task**</b><br>
+  <b>Fig. 1: High-level Description of Project Task</b><br>
   <br><br>
 </p>
 
-
-
- 
 Although it's a steep task, our team is prepared and has prior experience with image classification that could be helpful, such as working with the renowned MNIST Dataset (shown below) to organize numbers by different fonts:
 
 <p align="center">
