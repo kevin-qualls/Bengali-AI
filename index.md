@@ -247,10 +247,14 @@ Since using an instance of ImageDataGenerator class was sometimes causing the se
 
 We have previously noticed that our model started to perform significantly worse when additional convolutional layers were added. For our final model, we have attempted to get some additional performance by making our neural network 3 layers deeper while introducing a ResNet - style connection short-circuiting the additional layers. Our implementation of the residual block was inspired by [1] and the example from our last homework, in which we learned how to customize Keras models using a bit of Tensorflow backend. Since our convolutions had stride = 1 and 'same' padding, the dimension of their output was the same as the input dimension (except the first convolution, which introduced a number of filters). This fact made combining the two tensors at the end of the residual block particularly simple.
 
-The summary of our final model is
+The summary of our final model is:
 
 <p align="center">
 <img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76186045-81014c00-61a7-11ea-8a84-ec434d9ccf7a.png">
+</p>
+
+<p align="center">
+  <b>Fig. 11: Final Model Schematic</b><br>
 </p>
 
 Where all convolutional layers had 20 filters of dimensions 3x3 and relu activations. Prior to writing the midway blog post, we performed extensive tuning of the number of filters; after exploring several different values with our new model, we found that the same values produced the best performance this time as well.
