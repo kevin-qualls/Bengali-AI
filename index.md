@@ -5,7 +5,7 @@ Welcome to our website for our DATA 2040 Midterm Project!
 
 We are graduate students at Brown University performing machine learning techniques to classify the Bengali language, as part of the following [Kaggle Competition](https://www.kaggle.com/c/bengaliai-cv19). 
 
-For a presentation of our process and results, check out the following screencast, [Github Repository](https://github.com/stefs92/Bengali-AI.git) or blogs below! Here is also our [submission](link) to the competition!
+For a presentation of our process and results, check out the following screencast, [Github Repository](https://github.com/stefs92/Bengali-AI.git) or blogs below! Here is also our [submission](https://www.kaggle.com/stefanstanojevic/kernel2b55603361?scriptVersionId=30126084) to the competition!
 
 
 ## Initial Blog Post: Assessing the Challenge (Feb. 18, 2020)
@@ -114,7 +114,7 @@ By a few trial and errors we have figured out a good initial set of hyperparamet
   <b>Fig. 6: Model Validation Accuracy of 41%</b><br>
 </p>
 
-
+The validation accuracy increases as the number of epochs increases, and then begins to plateau around 40% after 35 epochs.
 
 ## Next Steps
 
