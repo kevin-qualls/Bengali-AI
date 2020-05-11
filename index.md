@@ -129,9 +129,11 @@ Most importantly, we will experiment more with different neural network architec
 <p align="center">
 <img width="280" alt="relu" src="https://user-images.githubusercontent.com/54907300/74802429-d84a8580-52a7-11ea-8cdc-dd00f6a806af.png">
   
+</p>
 <p align="center">
   <b>Fig. 7: Identity Layers: A Solution to Increase Training Accuracy%</b><br>
 </p>
+
 
 The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases to zero in the above block. If we choose to make our network particularly deep, we would like to incorporate this kind of structures to help with training.
 
