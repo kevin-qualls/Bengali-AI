@@ -30,7 +30,7 @@ Although it's a steep task, our team is prepared and has prior experience with i
  
 </p>
 <p align="center">
-  <b>Fig. 2: MNIST Dataset - Classifying Numeric Images. Image adapted from Wikipedia</b><br>
+  <b>Fig. 2: MNIST Dataset - Classifying Numeric Images. Image adapted from [Wikipedia](https://en.wikipedia.org/wiki/MNIST_database)</b><br>
 </p>
  
 ## Examining the Data
@@ -44,7 +44,7 @@ We will mostly be using the .parquet train and test files, each of which contain
 
 </p>
 <p align="center">
-  <b>Fig. 3: Plotting a Graphemic Root as a Trial Run.</b><br>
+  <b>Fig. 3: Plotting a Graphemic Root as a Trial Run</b><br>
 </p>
 
 We noticed the image has some similarities to the 94th grapheme root from the glossary:
