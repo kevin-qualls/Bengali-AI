@@ -127,8 +127,9 @@ We also would like to find an effective way to normalize the data. We initially 
 Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network, like in the below figure taken from the paper.
 
 <p align="center">
-<img width="280" alt="relu" src="https://user-images.githubusercontent.com/54907300/74802429-d84a8580-52a7-11ea-8cdc-dd00f6a806af.png">
+<img width="519" alt="fig 6 graph" src="https://user-images.githubusercontent.com/54907300/81520130-5ea7be00-9311-11ea-9947-364161687d2b.png">
 </p>
+
 
 </p>
 <p align="center">
