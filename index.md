@@ -95,6 +95,7 @@ model = keras.models.Sequential([
     keras.layers.Dense(units=168, activation='softmax'),
    
 ```
+
 </p>
 <p align="center">
   <b>Fig. 5: Simple Convolutional Neural Network</b><br>
@@ -107,7 +108,7 @@ By a few trial and errors we have figured out a good initial set of hyperparamet
 
 
 <p align="center">
-<img width="375" alt="accuracy" src="https://user-images.githubusercontent.com/54907300/74803236-26f91f00-52aa-11ea-85c4-f46c7275a226.png">
+  <img width="519" alt="fig 6 graph" src="https://user-images.githubusercontent.com/54907300/81521026-032aff80-9314-11ea-90a1-2a56cbd1fb2a.png">
 
 </p>
 <p align="center">
