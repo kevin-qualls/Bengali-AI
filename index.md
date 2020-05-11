@@ -160,7 +160,7 @@ Since finishing our last blog post, we have realized that increasing the number 
 
 <p align="center">
 
-<img width="474" alt="Fig 8 graph" src="https://user-images.githubusercontent.com/54907300/81539092-b0fed400-933d-11ea-9139-a9a265261e32.png">
+<img width="468" alt="Fig 8 graph" src="https://user-images.githubusercontent.com/54907300/81539904-e657f180-933e-11ea-9b6a-72fc859c6588.png">
   
 </p>
 <p align="center">
@@ -175,7 +175,7 @@ Here, the model was trained for 50 epochs. The x-axis is labeled according to ep
 We have attempted to regularize the model by introducing dropouts after max pooling layers. After adding a dropout of 0.5 after each max pooling layer, the model performed significantly worse, with accuracy hovering around 2.5% after 5 epochs - this value was too high. We tuned both the number of filters and the dropout parameter by training the model for several epochs and choosing the best - performing model, with 20 filters, dropouts of 0.1 after max pooling layers and a dropout of 0.2 between the two dense layers at the very end of the neural network. This gave us the validation accuracy of around 47% and the training is visualized in the Tensorboard's graph below (similar to value accuracy)
 
 <p align="center">
-<img width="415" alt="fig 9 graph" src="https://user-images.githubusercontent.com/54907300/81538143-5618ad00-933c-11ea-897d-4b31615d9860.png">
+<img width="419" alt="Fig 9 graph" src="https://user-images.githubusercontent.com/54907300/81539906-e6f08800-933e-11ea-820f-774bdf913559.png">
 </p>
 
 <p align="center">
