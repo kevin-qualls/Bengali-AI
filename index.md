@@ -30,7 +30,7 @@ Although it's a steep task, our team is prepared and has prior experience with i
  
 </p>
 <p align="center">
-  <b>Fig. 2: MNIST Dataset - Classifying Numeric Images. Image adapted from Wikipedia.</b><br>
+  <b>Fig. 2: MNIST Dataset - Classifying Numeric Images. Image adapted from Wikipedia [1].</b><br>
 </p>
  
 ## Examining the Data
@@ -108,7 +108,13 @@ By a few trial and errors we have figured out a good initial set of hyperparamet
 
 <p align="center">
 <img width="375" alt="accuracy" src="https://user-images.githubusercontent.com/54907300/74803236-26f91f00-52aa-11ea-85c4-f46c7275a226.png">
+
 </p>
+<p align="center">
+  <b>Fig. 6: Model Validation Accuracy of 41%</b><br>
+</p>
+
+
 
 ## Next Steps
 
@@ -124,15 +130,21 @@ Most importantly, we will experiment more with different neural network architec
 <img width="280" alt="relu" src="https://user-images.githubusercontent.com/54907300/74802429-d84a8580-52a7-11ea-8cdc-dd00f6a806af.png">
 </p>
 
+</p>
+<p align="center">
+  <b>Fig. 6: Model Validation Accuracy of 41%</b><br>
+</p>
+
 The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases to zero in the above block. If we choose to make our network particularly deep, we would like to incorporate this kind of structures to help with training.
 
 Finally, while ideally we would like to take a shot at designing our own neural network from scratch, we can also try to apply transfer learning - take examples of public source high - performing convolutional neural networks from the internet, and retrain the last couple of layers to adapt them to our task.
 
 ## References
 
-[1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
+1. He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
 
-
+## Image Reference
+[1] MNIST database - Wikipedia - https://en.wikipedia.org/wiki/MNIST_database
 ...
 
 
@@ -199,7 +211,7 @@ While we are somewhat satisfied with getting close to 50% accuracy while disting
 For the remainder of this project, we would like to play with adding more layers with "skip connections", as used in the ResNet architecture and described in the previous blog post. A neural network with an added block of layers and a "skip connection" should be at least as good and hopefully better, and we should see at least a small increase in accuracy.
 
 ## References
-[1] tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
+1. tf.keras.layers.SpatialDropout2D | TensorFlow Core v.2
 
 ...
  
@@ -271,9 +283,9 @@ Finally, the model itself is probably where the largest imporvements can be made
 
 ## References
 
-[1] Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
+1. Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
 
-[2] Keras references were consulted extensively and for help locating simple python commands, StackExchange
+2. Keras references were consulted extensively and for help locating simple python commands, StackExchange
 
-[3] The inspiration for starting model was taken from Geron's companion notebook
+3. The inspiration for starting model was taken from Geron's companion notebook
 
