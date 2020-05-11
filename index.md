@@ -128,8 +128,8 @@ Most importantly, we will experiment more with different neural network architec
 
 <p align="center">
 <img width="280" alt="relu" src="https://user-images.githubusercontent.com/54907300/74802429-d84a8580-52a7-11ea-8cdc-dd00f6a806af.png">
+  
 </p>
-
 <p align="center">
   <b>Fig. 7: Identity Layers: A Solution to Increase Training Accuracy%</b><br>
 </p>
