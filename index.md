@@ -27,7 +27,6 @@ Although it's a steep task, our team is prepared and has prior experience with i
 
 <p align="center">
 <img width="575" alt="Screen Shot 2020-02-18 at 1 47 18 AM" src="https://user-images.githubusercontent.com/54907300/74720496-e941bb00-5203-11ea-9626-bfdd9d10ecb4.png">
- </p>
  
 </p>
 <p align="center">
@@ -42,7 +41,6 @@ We will mostly be using the .parquet train and test files, each of which contain
 
 <p align="center">
 <img width="436" alt="Screen Shot 2020-02-18 at 5 26 45 AM" src="https://user-images.githubusercontent.com/54907300/74727573-6292db00-520f-11ea-8242-8b36604e1408.png">
-</p>
 
 </p>
 <p align="center">
