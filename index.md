@@ -276,7 +276,7 @@ Since we were loading the data piecewise while training so as not to overload th
 
 Where the x-axis corresponds to training epochs and two different plots correspond to training and validation accuracies. The whole process took around 40 epochs. During the majority of the training process, our training accuracy was actually lagging behind the validation accuracy. We believe that this is due to the fact that our model contains dropouts, which are only used for training and not for testing and validation. Our validation accuracy for grapheme roots ended up hovering around 70%. We were hoping to do better, but this still seems decent for a problem with 168 classes.
 
-After training on the grapheme roots, we replaced the last layer of the model with the one appropriate for predicting vowel and consonant diacritics (with 11 and 7 outputs, respectively). Training the neural network on vowel diacritics resulted in the following performance graph, 
+After training on the grapheme roots, we replaced the last layer of the model with the one appropriate for predicting vowel and consonant diacritics (with 11 and 7 outputs, respectively). Training the neural network on vowel diacritics resulted in the following performance graph, where our final validation accuracy ended up being around 90%. 
 
 <p align="center">
 <img width="445" alt="Fig 14 " src="https://user-images.githubusercontent.com/54907300/81545622-2622d700-9347-11ea-9c36-04c9c2dbbd47.png">
@@ -286,9 +286,9 @@ After training on the grapheme roots, we replaced the last layer of the model wi
   <b>Fig. 14: Final Model Accuracy for Vowel Diacritics</b><br>
 </p>
 
-where our final validation accuracy ended up being around 90%. In this plot, validation accuracy plots are again higher than the ones for training accuracy.
+In this plot, validation accuracy plots are again higher than the ones for training accuracy.
 
-Training our model on consonant diacritics instead gave us the accuracy of around 93% and resulted in the following piecewise performance graph,
+Training our model on consonant diacritics instead gave us the accuracy of around 93% and resulted in the following piecewise performance graph:
 
 <p align="center">
 <img width="384" alt="Fig 15" src="https://user-images.githubusercontent.com/54907300/81545620-258a4080-9347-11ea-843f-061d23bcafa5.png">
