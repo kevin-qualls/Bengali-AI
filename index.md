@@ -160,7 +160,7 @@ Since finishing our last blog post, we have realized that increasing the number 
 
 <p align="center">
 
-<img width="282" alt="Fig 7 graph" src="https://user-images.githubusercontent.com/54907300/81536388-7430de00-9339-11ea-8ef3-04cbc2c0f15d.png">
+<img width="474" alt="Fig 8 graph" src="https://user-images.githubusercontent.com/54907300/81539092-b0fed400-933d-11ea-9139-a9a265261e32.png">
   
 </p>
 <p align="center">
