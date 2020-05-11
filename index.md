@@ -107,7 +107,8 @@ By a few trial and errors we have figured out a good initial set of hyperparamet
 
 
 <p align="center">
-  <img width="519" alt="fig 6 graph" src="https://user-images.githubusercontent.com/54907300/81521026-032aff80-9314-11ea-90a1-2a56cbd1fb2a.png">
+<img width="465" alt="fig 6 graph" src="https://user-images.githubusercontent.com/54907300/81521610-b9dbaf80-9315-11ea-9a24-6fc83ed17238.png">
+
 
 <p align="center">
   <b>Fig. 6: Model Validation Accuracy of 41%</b><br>
