@@ -18,8 +18,10 @@ At a high level, we wish to break down an image of a Bengali word and assign the
 <p align="center">
 <img width="647" alt="high_level_picture" src="https://user-images.githubusercontent.com/54907300/74720359-abdd2d80-5203-11ea-90a5-734785bae48b.png">
 </p>
-**Fig. 1: High-level Description of Project Task**
-(how to center line in github)
+<p align="center">
+  <b>**Fig. 1: High-level Description of Project Task**</b><br>
+  <br><br>
+</p>
 
 
 
