@@ -164,15 +164,16 @@ Since finishing our last blog post, we have realized that increasing the number 
   
 </p>
 <p align="center">
-  <b>Fig. 8: Comparing Validation (Blue) and Training (Orange) - Overfitting occurs at 50% mark%</b><br>
+  <b>Fig. 8: Comparing Validation (Blue) and Training (Orange) - Overfitting occurs at 50% mark</b><br>
 </p>
 
-
-Here, the model was trained for 50 epochs. The x-axis is labeled according to epochs/50, the orange plot corresponds to the training and blue plot to the validation accuracy. One counterintuitive aspect of this plot and the following ones is that, in the initial stages of the training, the validation accuracy is actually significantly higher than the training accuracy. We attribute this to using dropouts (here, dropouts are applied only between the final two dense layers), which are applied only during the training and not validation.
+Here, the model was trained for 50 epochs and overfitting occured at 25 epochs. One counterintuitive aspect of this plot and the following ones is that, in the initial stages of the training, the validation accuracy is actually significantly higher than the training accuracy (up until approximately the 60% mark, 30 epochs). We attribute this to using dropouts (here, dropouts are applied only between the final two dense layers), which are applied only during the training and not validation.
 
 ## Three Approaches to Regularizing the Model
 
-We have attempted to regularize the model by introducing dropouts after max pooling layers. After adding a dropout of 0.5 after each max pooling layer, the model performed significantly worse, with accuracy hovering around 2.5% after 5 epochs - this value was too high. We tuned both the number of filters and the dropout parameter by training the model for several epochs and choosing the best - performing model, with 20 filters, dropouts of 0.1 after max pooling layers and a dropout of 0.2 between the two dense layers at the very end of the neural network. This gave us the validation accuracy of around 47% and the training is visualized in the Tensorboard's graph below (similar to value accuracy):
+We have attempted to regularize the model by introducing dropouts after max pooling layers. After adding a dropout of 0.5 after each max pooling layer, the model performed significantly worse, with accuracy hovering around 2.5% after 5 epochs - this value was too high. 
+
+We tuned both the number of filters and the dropout parameter by training the model for several epochs and choosing the best - performing model, with 20 filters, dropouts of 0.1 after max pooling layers and a dropout of 0.2 between the two dense layers at the very end of the neural network. This gave us the validation accuracy of around 47% and the training is above 60% in the Tensorboard's graph below:
 
 <p align="center">
 <img width="433" alt="Fig 9 graph" src="https://user-images.githubusercontent.com/54907300/81602315-58a9ef80-939a-11ea-874c-8c62933e3e64.png">
@@ -182,7 +183,7 @@ We have attempted to regularize the model by introducing dropouts after max pool
   <b>Fig. 9: Validation (Blue) and Training (Orange) Improve After Tuning Model</b><br>
 </p>
 
-Here, the x-axis corresponds to the number of epochs trained, the orange plot is the training and blue plot validation accuracy.
+The validation accuarcy is higher than the training accuracy up until around 12 epochs, resulting in overfitting after around 12 epochs. The model-tuning resulted in overfitting at a faster rate, compared to the model in Fig. 8., which started to overfit at 25 epochs.
 
 For our second approach, we tried to regularize the neural net using SpatialDropouts - a technique that drops 2D Feature maps - while simultaneously adding "l1" and "l2" regularizers to the convolution 2D layers. Between convolution layers, we added the following,
 
