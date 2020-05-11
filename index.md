@@ -30,7 +30,7 @@ Although it's a steep task, our team is prepared and has prior experience with i
  
 </p>
 <p align="center">
-  <b>Fig. 2: MNIST Dataset - Classifying Numeric Images. Image adapted from [Wikipedia](https://en.wikipedia.org/wiki/MNIST_database)</b><br>
+  <b>Fig. 2: MNIST Dataset - Classifying Numeric Images. Image adapted from Wikipedia.</b><br>
 </p>
  
 ## Examining the Data
