@@ -5,7 +5,7 @@ Welcome to our website for our DATA 2040 Midterm Project!
 
 We are graduate students at Brown University performing machine learning techniques to classify the Bengali language, as part of the following [Kaggle Competition](https://www.kaggle.com/c/bengaliai-cv19). 
 
-For a presentation of our process and results, check out the following screencast (link), [Github Repository](https://github.com/stefs92/Bengali-AI.git) or blogs below!
+For a presentation of our process and results, check out the following screencast (link), [Github Repository](https://github.com/stefs92/Bengali-AI.git) or blogs below! Here is also our [submission](link) to the competition!
 
 
 ## Initial Blog Post: Assessing the Challenge (Feb. 18, 2020)
@@ -51,7 +51,13 @@ We noticed the image has some similarities to the 94th grapheme root from the gl
 
 <p align="center">
 <img width="329" alt="map_94" src="https://user-images.githubusercontent.com/54907300/74727346-04fe8e80-520f-11ea-9693-86e82d1ed432.png">
- </p>
+
+</p>
+<p align="center">
+  <b>Fig. 4: 94th Grapheme Root</b><br>
+</p>
+ 
+ 
 
 We believe the more we manually look at the images, the more we can improve our understanding of the Bengali language, which can ultimately help us form our model. 
 
@@ -64,7 +70,7 @@ In addition, the model trained in recognizing the grapheme root can then be used
 Having in mind that the diacritics are essentially decorations of the grapheme root, it seems reasonable that an effective neural network should work by first recognizing the root and consequently any extra addition to it. 
 
 
-We took as a starting point a simple convolutional neural network taken from from Geron's companion notebook to Chapter 14 of Hands-On Machine Learning, which we suitably tuned to our problem.
+We took as a starting point a simple convolutional neural network taken from Geron's companion notebook to Chapter 14 of Hands-On Machine Learning, which we suitably tuned to our problem.
 
 
 ```markdown
@@ -89,7 +95,10 @@ model = keras.models.Sequential([
     keras.layers.Dense(units=168, activation='softmax'),
    
 ```
-
+</p>
+<p align="center">
+  <b>Fig. 5: Simple Convolutional Neural Network</b><br>
+</p>
 
 
 We then started training the network on a portion of the available training data: the 50.000 images contained in the file train_image_data_0.parquet available at https://www.kaggle.com/c/bengaliai-cv19/data.
