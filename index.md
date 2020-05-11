@@ -124,16 +124,14 @@ We can also experiment with different possible ways of training the network. The
 
 We also would like to find an effective way to normalize the data. We initially tried dividing the data by its max image size (255), however the program crashes when doing so, perhaps since floats take up more memory than integers and we are already pushing RAM to its limits due to sheer amount of data. Using the ImageDataGenerator class could fix this issue as well.
 
-Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network, like in the below figure taken from the paper.
+Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network (1), like in the below figure taken from the paper.
 
 <p align="center">
-<img width="519" alt="fig 6 graph" src="https://user-images.githubusercontent.com/54907300/81520130-5ea7be00-9311-11ea-9947-364161687d2b.png">
+<img width="280" alt="relu" src="https://user-images.githubusercontent.com/54907300/74802429-d84a8580-52a7-11ea-8cdc-dd00f6a806af.png">
 </p>
 
-
-</p>
 <p align="center">
-  <b>Fig. 6: Model Validation Accuracy of 41%</b><br>
+  <b>Fig. 7: Identity Layers: A Solution to Increase Training Accuracy%</b><br>
 </p>
 
 The idea is to allow deeper neural networks to more easily approximate shallower ones - in order for above block to "disappear", it is enough to set all weights and biases to zero in the above block. If we choose to make our network particularly deep, we would like to incorporate this kind of structures to help with training.
@@ -142,7 +140,7 @@ Finally, while ideally we would like to take a shot at designing our own neural 
 
 ## References
 
-1. He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
+(1) He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
 
 ## Image Reference
 [1] MNIST database - Wikipedia - https://en.wikipedia.org/wiki/MNIST_database
