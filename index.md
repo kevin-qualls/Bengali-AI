@@ -262,19 +262,16 @@ Where all convolutional layers had 20 filters of dimensions 3x3 and relu activat
 Since we were loading the data piecewise while training so as not to overload the working memory, the performance graphs are pieced together from different training sessions. In order to do so, we used Tensorboard's "Wall" option. The performance of our final model on predicting grapheme roots is shown below,
 
 <p align="center">
-<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76186411-9cb92200-61a8-11ea-9681-ce45de4d7569.PNG">
+<img width="367" alt="Fig 12 Graph" src="https://user-images.githubusercontent.com/54907300/81543426-0b029800-9344-11ea-94d8-99f865ff9d98.png">
 </p>
 
-<p align="center">
-<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76189478-3258af80-61b1-11ea-9017-3aab3f3d04d3.PNG">
-</p>
 
 Where the x-axis corresponds to training epochs and two different plots correspond to training and validation accuracies. The whole process took around 40 epochs. During the majority of the training process, our training accuracy was actually lagging behind the validation accuracy. We believe that this is due to the fact that our model contains dropouts, which are only used for training and not for testing and validation. Our validation accuracy for grapheme roots ended up hovering around 70%. We were hoping to do better, but this still seems decent for a problem with 168 classes.
 
 After training on the grapheme roots, we replaced the last layer of the model with the one appropriate for predicting vowel and consonant diacritics (with 11 and 7 outputs, respectively). Training the neural network on vowel diacritics resulted in the following performance graph, 
 
 <p align="center">
-<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76188824-806cb380-61af-11ea-9774-82076c202865.PNG">
+<img width="445" alt="Fig 13 " src="https://user-images.githubusercontent.com/54907300/81543430-0c33c500-9344-11ea-9884-2a6971f77df4.png">
 </p>
 
 where our final validation accuracy ended up being around 90%. In this plot, validation accuracy plots are again higher than the ones for training accuracy.
@@ -282,7 +279,7 @@ where our final validation accuracy ended up being around 90%. In this plot, val
 Training our model on consonant diacritics instead gave us the accuracy of around 93% and resulted in the following piecewise performance graph,
 
 <p align="center">
-<img width="400" alt="high_level_picture" src="https://user-images.githubusercontent.com/31740043/76189139-51a30d00-61b0-11ea-9fa7-ab741628c8dd.PNG">
+<img width="384" alt="Fig 14" src="https://user-images.githubusercontent.com/54907300/81543433-0d64f200-9344-11ea-91a4-cfb5d9b35f6a.png">
 </p>
 
 In the first two plots on the left, validation accuracy is higher than the training accuracy. Then, in the third plot, the training accuracy starts smaller but overtakes the validation accuracy, signaling that some overfitting is starting to take place.
