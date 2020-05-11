@@ -96,7 +96,6 @@ model = keras.models.Sequential([
    
 ```
 
-</p>
 <p align="center">
   <b>Fig. 5: Simple Convolutional Neural Network</b><br>
 </p>
