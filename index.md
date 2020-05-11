@@ -159,7 +159,8 @@ In order to preprocess the data more efficiently, we have started using the Imag
 Since finishing our last blog post, we have realized that increasing the number of filters in convolutional layers can significantly improve the performance. However, when more than 25 filters were used, this resulted in significant overfitting. This is illustrated below, we can see the validation accuracy plateauing as the training accuracy is steadily improving.
 
 <p align="center">
-<img width="350" alt="fig 7 graph" src="https://user-images.githubusercontent.com/54907300/81534939-e5bb5d00-9336-11ea-83c1-2f286343616d.png">
+
+<img width="282" alt="Fig 7 graph" src="https://user-images.githubusercontent.com/54907300/81536388-7430de00-9339-11ea-8ef3-04cbc2c0f15d.png">
   
 </p>
 <p align="center">
