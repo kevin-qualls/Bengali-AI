@@ -191,6 +191,9 @@ keras.layers.Conv2D(filters=25, kernel_size=2, activation='relu', padding="SAME"
                 kernel_regularizer=regularizers.l1(0.01)),
 tf.keras.layers.SpatialDropout2D(rate = 0.2, data_format=None),
 ```
+<p align="center">
+  <b>Fig. 10: Introducing Spatial Dropouts to the Model</b><br>
+</p>
 
 For our third approach, we removed SpatialDropouts and kept the regularizers consistent ("l1"). 
 
@@ -209,7 +212,7 @@ After running our model for 30 epochs, we got small values for training accuracy
 </p>
 
 <p align="center">
-  <b>Fig. 10: Accuracies Less than 3% after Making Neural Network Model More Dense</b><br>
+  <b>Fig. 11: Accuracies Less than 3% after Making Neural Network Model More Dense</b><br>
 </p>
 
 <!-- We used 17 layers - 5 Convolution 2D, 3 Dense, 4 Dropouts, 1 Flatten, 4 MaxPooling (we also added 2 dropout layers), keeping all other parameters the same (i.e. filters set to 25). After running the model for 30 epochs, we surprisingly get the same accuracy and validation accuracy, less than 3%. 
@@ -254,7 +257,7 @@ The summary of our final model is:
 </p>
 
 <p align="center">
-  <b>Fig. 11: Final Model Schematic</b><br>
+  <b>Fig. 12: Final Model Schematic</b><br>
 </p>
 
 Where all convolutional layers had 20 filters of dimensions 3x3 and relu activations. Prior to writing the midway blog post, we performed extensive tuning of the number of filters; after exploring several different values with our new model, we found that the same values produced the best performance this time as well.
@@ -266,7 +269,7 @@ Since we were loading the data piecewise while training so as not to overload th
 </p>
 
 <p align="center">
-  <b>Fig. 12: Final Model Accuracy and Loss for Grapheme Roots</b><br>
+  <b>Fig. 13: Final Model Accuracy and Loss for Grapheme Roots</b><br>
 </p>
 
 
@@ -279,7 +282,7 @@ After training on the grapheme roots, we replaced the last layer of the model wi
 </p>
 
 <p align="center">
-  <b>Fig. 13: Final Model Accuracy for Vowel Diacritics</b><br>
+  <b>Fig. 14: Final Model Accuracy for Vowel Diacritics</b><br>
 </p>
 
 where our final validation accuracy ended up being around 90%. In this plot, validation accuracy plots are again higher than the ones for training accuracy.
@@ -291,7 +294,7 @@ Training our model on consonant diacritics instead gave us the accuracy of aroun
 </p>
 
 <p align="center">
-  <b>Fig. 14: Final Model Accuracy for Consonant Diacritics</b><br>
+  <b>Fig. 15: Final Model Accuracy for Consonant Diacritics</b><br>
 </p>
 
 In the first two plots on the left, validation accuracy is higher than the training accuracy. Then, in the third plot, the training accuracy starts smaller but overtakes the validation accuracy, signaling that some overfitting is starting to take place.
