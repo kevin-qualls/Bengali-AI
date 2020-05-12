@@ -124,7 +124,7 @@ We can also experiment with different possible ways of training the network. The
 
 We also would like to find an effective way to normalize the data. We initially tried dividing the data by its max image size (255), however the program crashes when doing so, perhaps since floats take up more memory than integers and we are already pushing RAM to its limits due to sheer amount of data. Using the ImageDataGenerator class could fix this issue as well.
 
-Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network (1), like in the below figure taken from the paper.
+Most importantly, we will experiment more with different neural network architectures and look for inspiration within the publicly available high-grade convolutional neural networks, and from the rich body of literature available on this topic. When faced with the problem of designing an efficient neural network architecture, one's first instinct is to add more layers. However, this leads to two issues that are really two sides of the same coin - increased computational complexity of training and overfitting. As noted in the famous ResNet paper, it is even common for training accuracy of overly deep models to decrease, a problem beyond overfitting. Their proposed solution is to add an identity function to the output of blocks of layers in their neural network [2], like in the below figure taken from the paper.
 
 <p align="center">
 <img width="280" alt="relu" src="https://user-images.githubusercontent.com/54907300/74802429-d84a8580-52a7-11ea-8cdc-dd00f6a806af.png">
@@ -141,10 +141,9 @@ Finally, while ideally we would like to take a shot at designing our own neural 
 
 ## References
 
-(1) He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
+[1] He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep Residual Learning for Image Recognition. 2016 IEEE Conference on Computer Vision and Pattern Recognition (CVPR). doi: 10.1109/cvpr.2016.90
 
-## Image References
-[1] MNIST database - Wikipedia - https://en.wikipedia.org/wiki/MNIST_database
+[2] MNIST database - Wikipedia - https://en.wikipedia.org/wiki/MNIST_database
 
 ...
 
@@ -230,7 +229,7 @@ While we are somewhat satisfied with getting close to 50% accuracy while disting
 For the remainder of this project, we would like to play with adding more layers with "skip connections", as used in the ResNet architecture and described in the previous blog post. A neural network with an added block of layers and a "skip connection" should be at least as good and hopefully better, and we should see at least a small increase in accuracy.
 
 ## References
-1. Keras references were consulted extensively
+[3] Keras references were consulted extensively
 
 ...
  
@@ -249,7 +248,7 @@ Since using an instance of ImageDataGenerator class was sometimes causing the se
 
 ## Model
 
-We have previously noticed that our model started to perform significantly worse when additional convolutional layers were added. For our final model, we have attempted to get some additional performance by making our neural network 3 layers deeper while introducing a ResNet - style connection short-circuiting the additional layers. Our implementation of the residual block was inspired by [1] and the example from our last homework, in which we learned how to customize Keras models using a bit of Tensorflow backend. Since our convolutions had stride = 1 and 'same' padding, the dimension of their output was the same as the input dimension (except the first convolution, which introduced a number of filters). This fact made combining the two tensors at the end of the residual block particularly simple.
+We have previously noticed that our model started to perform significantly worse when additional convolutional layers were added. For our final model, we have attempted to get some additional performance by making our neural network 3 layers deeper while introducing a ResNet - style connection short-circuiting the additional layers. Our implementation of the residual block was inspired by [4](https://github.com/relh/keras-residual-unit/blob/master/residual.py) and the example from our last homework, in which we learned how to customize Keras models using a bit of Tensorflow backend. Since our convolutions had stride = 1 and 'same' padding, the dimension of their output was the same as the input dimension (except the first convolution, which introduced a number of filters). This fact made combining the two tensors at the end of the residual block particularly simple.
 
 The summary of our final model is:
 
@@ -316,9 +315,9 @@ Finally, the model itself is probably where the largest imporvements can be made
 
 ## References
 
-1. Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
+[4] Implementation of the Residual Block at https://github.com/relh/keras-residual-unit/blob/master/residual.py
 
-2. Keras references were consulted extensively and for help locating simple python commands, StackExchange
+[2] Keras references were consulted extensively and for help locating simple python commands, StackExchange
 
-3. The inspiration for starting model was taken from Geron's companion notebook
+[3] The inspiration for starting model was taken from Geron's companion notebook
 
