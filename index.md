@@ -23,7 +23,7 @@ At a high level, we wish to break down an image of a Bengali word and assign the
   <b>Fig. 1: High-level Description of Project Task</b><br>
 </p>
 
-Although it's a steep task, our team is prepared and has prior experience with image classification that could be helpful, such as working with the renowned MNIST Dataset to organize numbers by different fonts (Image adapted from Wikipedia [1](https://en.wikipedia.org/wiki/MNIST_database)):
+Although it's a steep task, our team is prepared and has prior experience with image classification that could be helpful, such as working with the renowned MNIST Dataset to organize numbers by different fonts (Image adapted from Wikipedia [[1]](https://en.wikipedia.org/wiki/MNIST_database)):
 
 <p align="center">
 <img width="575" alt="Screen Shot 2020-02-18 at 1 47 18 AM" src="https://user-images.githubusercontent.com/54907300/74720496-e941bb00-5203-11ea-9626-bfdd9d10ecb4.png">
